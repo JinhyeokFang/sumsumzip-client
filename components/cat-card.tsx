@@ -30,17 +30,17 @@ export const CatCard = (props: CatCardProps) => {
                     width={40}
                 />
                 <div className="flex flex-col">
-                <p className="text-md">{ title }</p>
+                    <p className="text-md">{ title }</p>
                 </div>
             </CardHeader>
             <Divider/>
             <CardBody>
-                <p>{ description }</p>
                 <Image
                     alt="cat image"
                     src={ catImage }
                 />
+                <p>{ description }</p>
             </CardBody>
         </Card>
-    )
+    );
 };

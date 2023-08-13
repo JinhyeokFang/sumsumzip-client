@@ -3,9 +3,21 @@ import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@nextui-org/navb
 import { Link } from "@nextui-org/link";
 import { PageData } from "@/config/page-data";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import { UserApi } from "@/app/api/user.api";
 
 export const NavigationBar = () => {
     const pathname = usePathname();
+    const [isLogined, setIsLogined] = useState(false);
+
+    const loadAuth = async () => {
+      const authData = await UserApi.getAuth();
+      setIsLogined(authData.logined);
+    }
+
+    useEffect(() => {
+      loadAuth();
+    }, []);
 
     return (
         <Navbar>
@@ -14,7 +26,7 @@ export const NavigationBar = () => {
           </NavbarBrand>
           <NavbarContent className="hidden sm:flex gap-4" justify="center">
             {
-                PageData.map(page => (
+                PageData(isLogined).map(page => (
                     <NavbarItem key={page.name} isActive={ page.link === pathname }>
                         <Link color="foreground" href={ page.link }>
                             { page.name }
