@@ -1,6 +1,8 @@
+import { Button } from "@nextui-org/button";
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import { Divider } from "@nextui-org/divider";
 import { Image } from "@nextui-org/image";
+import { Input } from "@nextui-org/input";
 
 export interface CatCardProps {
     profileImage: string;
@@ -23,7 +25,7 @@ export const CatCard = (props: CatCardProps) => {
         <Card>
             <CardHeader className="flex gap-3">
                 <Image
-                    alt="user profile image"
+                    alt="프로필 사진"
                     height={40}
                     radius="sm"
                     src={ profileImage }
@@ -41,6 +43,12 @@ export const CatCard = (props: CatCardProps) => {
                 />
                 <p>{ description }</p>
             </CardBody>
+            <CardFooter className="p-4">
+                <Input type="title" placeholder="댓글을 입력하세요" className="mr-2" />
+                <Button color="primary">
+                    작성
+                </Button>
+            </CardFooter>
         </Card>
     );
 };

@@ -326,24 +326,24 @@
     "@nextui-org/theme" "2.0.4"
     "@nextui-org/use-image" "2.0.2"
 
-"@nextui-org/input@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@nextui-org/input/-/input-2.0.0.tgz#b4e3e65e2e8c551dae5ad87264e68d37a4d2fd49"
-  integrity sha512-YemYi5JutY993VAi+ose74d0ATp7YTbHk3H7MHwR+6Ii3WsvwJ1JVk1+BBfhQTaBr5rJJPov8mocLL7c4Uqn3w==
+"@nextui-org/input@^2.0.14":
+  version "2.0.14"
+  resolved "https://registry.yarnpkg.com/@nextui-org/input/-/input-2.0.14.tgz#f74074fae13431731e62278641f18aa46928dfd7"
+  integrity sha512-r6ND9JbhOlynbcEOpa0ZH1qYWEvp20+MtTJ8msofIO6LV2ibCoqPMlgepk4ced7UPlashW4lzZa7r38Agb4lEQ==
   dependencies:
-    "@nextui-org/react-utils" "2.0.0"
-    "@nextui-org/shared-icons" "2.0.0"
-    "@nextui-org/shared-utils" "2.0.0"
-    "@nextui-org/system" "2.0.0"
-    "@nextui-org/theme" "2.0.0"
-    "@react-aria/focus" "^3.13.0"
-    "@react-aria/interactions" "^3.16.0"
-    "@react-aria/textfield" "^3.10.0"
-    "@react-aria/utils" "^3.18.0"
+    "@nextui-org/react-utils" "2.0.6"
+    "@nextui-org/shared-icons" "2.0.2"
+    "@nextui-org/shared-utils" "2.0.2"
+    "@nextui-org/system" "2.0.5"
+    "@nextui-org/theme" "2.0.5"
+    "@react-aria/focus" "^3.14.0"
+    "@react-aria/interactions" "^3.17.0"
+    "@react-aria/textfield" "^3.11.0"
+    "@react-aria/utils" "^3.19.0"
     "@react-stately/utils" "^3.7.0"
-    "@react-types/shared" "^3.18.1"
-    "@react-types/textfield" "^3.7.2"
-    react-textarea-autosize "^8.5.1"
+    "@react-types/shared" "^3.19.0"
+    "@react-types/textfield" "^3.7.3"
+    react-textarea-autosize "^8.5.2"
 
 "@nextui-org/kbd@2.0.0":
   version "2.0.0"
@@ -396,6 +396,11 @@
   resolved "https://registry.yarnpkg.com/@nextui-org/react-rsc-utils/-/react-rsc-utils-2.0.4.tgz#15f24e306548960bbefab24ad61f264ae98041ae"
   integrity sha512-LeHsh9Wf+AVk40empH0I14KPyZ8FhyUpQR4FzNmvTWZK5uXBmvgsbmGPtErferSKGTUliYHaTa9BeizTjRKcyg==
 
+"@nextui-org/react-rsc-utils@2.0.6":
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/@nextui-org/react-rsc-utils/-/react-rsc-utils-2.0.6.tgz#931aa1e66743e454b571efca986eecc4ba371de5"
+  integrity sha512-32hglPfvA77lFO1XbDBf8a/bVthRjFTWWsYAMGWFF4GKhl/WYBzVRaFmIQjimd6FOfLFhPvolWHEukH3kTlyyQ==
+
 "@nextui-org/react-utils@2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@nextui-org/react-utils/-/react-utils-2.0.0.tgz#2dd392562e7ec77439c66fb9ee45e30456674edf"
@@ -412,6 +417,14 @@
     "@nextui-org/react-rsc-utils" "2.0.4"
     "@nextui-org/shared-utils" "2.0.2"
 
+"@nextui-org/react-utils@2.0.6":
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/@nextui-org/react-utils/-/react-utils-2.0.6.tgz#b338a74082b1e849c7b63c173086f41f075e0ff4"
+  integrity sha512-9mRDJj1hNNdKTxt9idQc/OVI+3UzvSErRCjN2hfVVi2c5JrR5b0/Zpx7PV0PHy7yfGUn1hyvwK5ZTVkNhxISKQ==
+  dependencies:
+    "@nextui-org/react-rsc-utils" "2.0.6"
+    "@nextui-org/shared-utils" "2.0.2"
+
 "@nextui-org/ripple@2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@nextui-org/ripple/-/ripple-2.0.0.tgz#b31357ac3790b53bfce3d909cc4f267d08be34d8"
@@ -426,6 +439,11 @@
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@nextui-org/shared-icons/-/shared-icons-2.0.0.tgz#94840a538fdc4874da9e52c02a4784536e041e02"
   integrity sha512-0yc8ZO0Jx3xwqtQm1PMYzJD92ia5jOxkbmij8/+6/DeFbLj+jXcr23zTSHJvi2LIhzhGzF5E8PRbWBOoCzZ9aw==
+
+"@nextui-org/shared-icons@2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@nextui-org/shared-icons/-/shared-icons-2.0.2.tgz#1c7405d663d2ab77f2f80534e3f7cfc54f9fe9d6"
+  integrity sha512-TtGFRY4ihRg8HuaFmwIx83LgCZ5bf2FOs407v23Bb0RDrum+3qZOeuClC8bcvivWZz/KUz9ZugGJdGYYSkMcbA==
 
 "@nextui-org/shared-utils@2.0.0":
   version "2.0.0"
@@ -529,6 +547,23 @@
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/@nextui-org/theme/-/theme-2.0.4.tgz#80fc50dbb918b830e348f89340b4382d849dc634"
   integrity sha512-hTOMnvb58FnlRG27S6w7ruIdflZs0D9gVaUOxf9ct8YPHr4ZEzgURi6z5ir9V9ZOP/r3Yi6PqqROzJ708TIvgg==
+  dependencies:
+    color "^4.2.3"
+    color2k "^2.0.2"
+    deepmerge "4.3.1"
+    flat "^5.0.2"
+    lodash.foreach "^4.5.0"
+    lodash.get "^4.4.2"
+    lodash.kebabcase "^4.1.1"
+    lodash.mapkeys "^4.6.0"
+    lodash.omit "^4.5.0"
+    tailwind-variants "^0.1.13"
+    tailwindcss "^3.2.7"
+
+"@nextui-org/theme@2.0.5":
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/@nextui-org/theme/-/theme-2.0.5.tgz#5446158e3bab58cdac56c66b3af0f5e233d2179e"
+  integrity sha512-4br6xRTYGbDCL8Vwm4CP0VqEXORROyQCmLSwNFaXr6s0vB5nX5tnJHqyDIvpq5Al7I2H8HMG2KOUHyhbaKOKFA==
   dependencies:
     color "^4.2.3"
     color2k "^2.0.2"
@@ -730,7 +765,7 @@
     "@react-types/switch" "^3.4.0"
     "@swc/helpers" "^0.5.0"
 
-"@react-aria/textfield@^3.10.0":
+"@react-aria/textfield@^3.11.0":
   version "3.11.0"
   resolved "https://registry.yarnpkg.com/@react-aria/textfield/-/textfield-3.11.0.tgz#b6410fa1d814e1e7cc49254eab88b888bd7e0f54"
   integrity sha512-07pHRuWeLmsmciWL8y9azUwcBYi1IBmOT9KxBgLdLK5NLejd7q2uqd0WEEgZkOc48i2KEtMDgBslc4hA+cmHow==
@@ -884,7 +919,7 @@
     "@react-types/checkbox" "^3.5.0"
     "@react-types/shared" "^3.19.0"
 
-"@react-types/textfield@^3.7.2", "@react-types/textfield@^3.7.3":
+"@react-types/textfield@^3.7.3":
   version "3.7.3"
   resolved "https://registry.yarnpkg.com/@react-types/textfield/-/textfield-3.7.3.tgz#230091273dd7bd6bbb1df6606eccc8a3752fb190"
   integrity sha512-M2u9NK3iqQEmTp4G1Dk36pCleyH/w1n+N52u5n0fRlxvucY/Od8W1zvk3w9uqJLFHSlzleHsfSvkaETDJn7FYw==
@@ -2728,7 +2763,7 @@ react-style-singleton@^2.2.1:
     invariant "^2.2.4"
     tslib "^2.0.0"
 
-react-textarea-autosize@^8.5.1:
+react-textarea-autosize@^8.5.2:
   version "8.5.2"
   resolved "https://registry.yarnpkg.com/react-textarea-autosize/-/react-textarea-autosize-8.5.2.tgz#6421df2b5b50b9ca8c5e96fd31be688ea7fa2f9d"
   integrity sha512-uOkyjkEl0ByEK21eCJMHDGBAAd/BoFQBawYK5XItjAmCTeSbjxghd8qnt7nzsLYzidjnoObu6M26xts0YGKsGg==

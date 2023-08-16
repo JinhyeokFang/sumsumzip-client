@@ -1,9 +1,9 @@
 'use client'
 import { CatCard } from "@/components/cat-card";
 import { useEffect, useState } from "react";
-import { Scroll } from "./util/scroll";
 import { Cat } from "./api/interfaces/cat.interface";
 import { CatApi } from "./api/cat.api";
+import { Scroll } from "@/util/scroll";
 
 let pageNumber = 0;
 export default function Home() {

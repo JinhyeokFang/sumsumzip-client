@@ -5,6 +5,7 @@ import { PageData } from "@/config/page-data";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { UserApi } from "@/app/api/user.api";
+import { Logo } from "./logo";
 
 export const NavigationBar = () => {
     const pathname = usePathname();
@@ -12,6 +13,7 @@ export const NavigationBar = () => {
 
     const loadAuth = async () => {
       const authData = await UserApi.getAuth();
+      console.log(authData);
       setIsLogined(authData.logined);
     }
 
@@ -23,6 +25,7 @@ export const NavigationBar = () => {
         <Navbar>
           <NavbarBrand>
             <p className="font-bold text-inherit">숨숨집</p>
+            <Logo />
           </NavbarBrand>
           <NavbarContent className="hidden sm:flex gap-4" justify="center">
             {

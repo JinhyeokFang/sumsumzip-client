@@ -33,4 +33,20 @@ export class CatApi {
             throw error;
         }
     }
+
+    static async loadCatById(catId: number): Promise<Cat> {
+        try {
+            const res = await fetch(`${Constants.serverAddress}/cat/${catId}`, {
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                cache: 'no-cache'
+            });
+            const body = await res.json();
+            return body;
+        } catch (error) {
+            console.error(error);
+            throw error;
+        }
+    }
 }

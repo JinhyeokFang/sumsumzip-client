@@ -33,7 +33,7 @@ export default function RootLayout({
 					"min-h-screen bg-background font-sans antialiased",
 				)}
 			>
-				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+				<Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
 					<div className="relative flex flex-col h-screen">
             			<NavigationBar />
 						<main className="container mx-auto max-w-7xl pt-8 px-6 flex-grow">
