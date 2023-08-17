@@ -1,5 +1,5 @@
 import { Constants } from "@/config/constants";
-import { Cat } from "./interfaces/cat.interface";
+import { Cat } from "@/interfaces/cat.interface";
 
 export class CatApi {
     static async loadCats(pageNumber: number = 0): Promise<Cat[]> {
@@ -41,6 +41,28 @@ export class CatApi {
                     'Content-Type': 'application/json',
                 },
                 cache: 'no-cache'
+            });
+            const body = await res.json();
+            return body;
+        } catch (error) {
+            console.error(error);
+            throw error;
+        }
+    }
+
+    static async uploadCat(token: string, title: string, description: string, image: File): Promise<void> {
+        const formData = new FormData();
+		formData.append('image', image);
+		formData.append('title', title);
+		formData.append('description', description);
+
+        try {
+            const res = await fetch(`${Constants.serverAddress}/cat/upload`, {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                },
+                body: formData
             });
             const body = await res.json();
             return body;

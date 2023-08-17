@@ -39,7 +39,7 @@ export default function Home() {
 					.sort((a, b) => -(a.id - b.id))
 					.map((cat, index) => (
 						<CatCard
-							key={index} 
+							key={index}
 							userId={cat.user.id + ""}
 							profileImage={cat.user.picture}
 							catImage={cat.url}

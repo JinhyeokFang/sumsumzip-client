@@ -1,4 +1,4 @@
 export interface Auth {
     logined: boolean;
-    token?: string;
+    token?: string | null;
 }

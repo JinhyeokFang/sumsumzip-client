@@ -1,5 +1,6 @@
 import { Constants } from "@/config/constants";
-import { Auth } from "./interfaces/auth.interface";
+import { Auth } from "@/interfaces/auth.interface";
+import { useAuth } from "@/states/auth";
 
 export class UserApi {
     static async getAuth(): Promise<Auth> {
@@ -34,6 +35,5 @@ export class UserApi {
             console.error(error);
             throw error;
         }
-        
     }
 }
