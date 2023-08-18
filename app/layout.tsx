@@ -39,7 +39,13 @@ export default function RootLayout({
 						<main className="container mx-auto max-w-7xl pt-8 px-6 flex-grow">
 							{children}
 						</main>
-						<footer className="w-full flex items-center justify-center py-3">
+						<footer className="w-full flex items-center justify-start p-4">
+							<p className="text-[0.5rem]">
+								서비스명: 숨숨집 <br />
+								제작자: 방진혁 <br />
+								서버 코드: <a href="https://github.com/jinhyeokfang/sumsumzip_springboot">https://github.com/jinhyeokfang/sumsumzip_springboot</a> &nbsp;
+								클라이언트 코드: <a href="https://github.com/jinhyeokfang/sumsumzip-client">https://github.com/jinhyeokfang/sumsumzip-client</a> <br/>
+							</p>
 						</footer>
 					</div>
 				</Providers>

@@ -23,6 +23,14 @@ const pageDataWhenLogined = [
         link: '/my', 
     },
     {
+        name: '팔로우',
+        link: '/follow', 
+    },
+    {
+        name: '좋아요',
+        link: '/like', 
+    },
+    {
         name: '공유하기',
         link: '/upload', 
     },

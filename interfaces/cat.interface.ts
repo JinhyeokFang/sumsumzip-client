@@ -1,3 +1,4 @@
+import { Comment } from "./comment.interface";
 import { User } from "./user.interface";
 
 export interface Cat {
@@ -6,4 +7,6 @@ export interface Cat {
     title: string;
     description: string;
     id: number;
+    likeList: User[];
+    comments: Comment[];
 }

@@ -71,4 +71,56 @@ export class CatApi {
             throw error;
         }
     }
+
+    static async like(token: string, catId: number): Promise<void> {
+        try {
+            await fetch(`${Constants.serverAddress}/cat/like`, {
+                method: 'PUT',
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                },
+                body: new URLSearchParams({
+                    catId: `${catId}`,
+                })
+            });
+        } catch (error) {
+            console.error(error);
+            throw error;
+        }
+    }
+
+    static async dislike(token: string, catId: number): Promise<void> {
+        try {
+            await fetch(`${Constants.serverAddress}/cat/dislike`, {
+                method: 'PUT',
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                },
+                body: new URLSearchParams({
+                    catId: `${catId}`,
+                })
+            });
+        } catch (error) {
+            console.error(error);
+            throw error;
+        }
+    }
+
+    static async addComment(token: string, catId: number, content: string): Promise<void> {
+        try {
+            await fetch(`${Constants.serverAddress}/cat/comment`, {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                },
+                body: new URLSearchParams({
+                    catId: `${catId}`,
+                    content,
+                })
+            });
+        } catch (error) {
+            console.error(error);
+            throw error;
+        }
+    }
 }

@@ -1,13 +1,15 @@
 'use client'
 import { CatCard } from "@/components/cat-card";
 import { useEffect, useState } from "react";
-import { Cat } from "./api/interfaces/cat.interface";
 import { CatApi } from "./api/cat.api";
 import { Scroll } from "@/util/scroll";
+import { Cat } from "@/interfaces/cat.interface";
+import { useAuth } from "@/states/auth";
 
 let pageNumber = 0;
 export default function Home() {
 	const [cats, setCats] = useState<Cat[]>([]);
+	const auth = useAuth();
 
 	// event listener에서는 state 불러오기가 불가능(useEffect 내에선 가능)하여 파라미터로 불러옴
 	const loadCats = async (cats: Cat[]) => {
@@ -40,11 +42,13 @@ export default function Home() {
 					.map((cat, index) => (
 						<CatCard
 							key={index}
-							userId={cat.user.id + ""}
+							userName={cat.user.name + ""}
 							profileImage={cat.user.picture}
 							catImage={cat.url}
 							title={cat.title}
 							description={cat.description}
+							like={cat.likeList.findIndex(user => user.email === auth.email) !== -1}
+							catId={cat.id}
 						/>
 					))
 			}
