@@ -42,6 +42,7 @@ export default function CatPage() {
 							description={cat.description}
 							like={cat.likeList.findIndex(user => user.email === auth.email) !== -1}
 							catId={cat.id}
+                            userId={cat.user.id}
 						/>
 					}
 				</div>

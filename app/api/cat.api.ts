@@ -18,9 +18,9 @@ export class CatApi {
         }
     }
 
-    static async loadCatsByUserId(userId: number): Promise<Cat[]> {
+    static async loadCatsByUserId(userId: number, pageNumber: number = 0): Promise<Cat[]> {
         try {
-            const res = await fetch(`${Constants.serverAddress}/cat/user/${userId}`, {
+            const res = await fetch(`${Constants.serverAddress}/cat/user/${userId}?pageNumber=${pageNumber}`, {
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -44,6 +44,41 @@ export class CatApi {
             });
             const body = await res.json();
             return body;
+        } catch (error) {
+            console.error(error);
+            throw error;
+        }
+    }
+
+    static async loadCatsByFollowingList(token: string, pageNumber: number = 0): Promise<Cat[]> {
+        try {
+            const res = await fetch(`${Constants.serverAddress}/cat/follows?pageNumber=${pageNumber}`, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+                cache: 'no-cache'
+            });
+            const body = await res.json();
+            return body.cats;
+        } catch (error) {
+            console.error(error);
+            throw error;
+        }
+    }
+
+
+    static async loadCatsByLikeList(token: string): Promise<Cat[]> {
+        try {
+            const res = await fetch(`${Constants.serverAddress}/cat/likes`, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+                cache: 'no-cache'
+            });
+            const body = await res.json();
+            return body.cats;
         } catch (error) {
             console.error(error);
             throw error;

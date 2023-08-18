@@ -10,6 +10,7 @@ import { CatApi } from "@/app/api/cat.api";
 import { ChangeEvent, useRef, useState } from "react";
 import { Popover, PopoverContent, PopoverTrigger } from "@nextui-org/popover";
 import { useRouter } from "next/navigation";
+import { UserApi } from "@/app/api/user.api";
 
 export interface CatCardProps {
     profileImage: string;
@@ -19,12 +20,13 @@ export interface CatCardProps {
     description: string;
     like: boolean;
     catId: number;
+    userId: number;
 }
 
 export const CatCard = (props: CatCardProps) => {
     const auth = useAuth();
     const [commentContent, setCommentContent] = useState('');
-    const commentInputRef = useRef<HTMLInputElement>();
+    const commentInputRef = useRef<HTMLInputElement>(null);
     const { push } = useRouter();
     const {
         profileImage,
@@ -34,7 +36,12 @@ export const CatCard = (props: CatCardProps) => {
         description,
         like,
         catId,
+        userId,
     } = props;
+
+    const onUserClicked = async () => {
+        push(`/user/${userId}`);
+    }
 
     const onPressedChange = (pressed: boolean) => {
         if (auth.token === null) {
@@ -75,6 +82,8 @@ export const CatCard = (props: CatCardProps) => {
                     avatarProps={{
                         src: profileImage
                     }}
+                    onClick={onUserClicked}
+                    className="cursor-pointer"
                 />
             </CardHeader>
             <Divider/>

@@ -1,24 +1,22 @@
 'use client'
 import { CatCard } from "@/components/cat-card";
 import { useEffect, useState } from "react";
-import { CatApi } from "../api/cat.api";
 import { Scroll } from "@/util/scroll";
 import { Cat } from "@/interfaces/cat.interface";
 import { useAuth } from "@/states/auth";
-import { UserApi } from "../api/user.api";
+import { CatApi } from "../api/cat.api";
 
 let pageNumber = 0;
-export default function MyPage() {
-	const auth = useAuth();
+export default function Follow() {
 	const [cats, setCats] = useState<Cat[]>([]);
+	const auth = useAuth();
 
 	// event listener에서는 state 불러오기가 불가능(useEffect 내에선 가능)하여 파라미터로 불러옴
 	const loadCats = async (cats: Cat[]) => {
 		if (auth.token === null) {
 			throw new Error("로그인이 필요합니다.");
 		}
-		const userDataFromApi = await UserApi.getUserDataByToken(auth.token);
-		const catsFromApi = await CatApi.loadCatsByUserId(parseInt(userDataFromApi.id),pageNumber);
+		const catsFromApi = await CatApi.loadCatsByFollowingList(auth.token, pageNumber)
 		pageNumber += 1;
 		Scroll.keepPosition(window, () => {
 			setCats(catsFromApi ? cats.concat(catsFromApi) : cats);
@@ -46,15 +44,15 @@ export default function MyPage() {
 					.sort((a, b) => -(a.id - b.id))
 					.map((cat, index) => (
 						<CatCard
-							userName={cat.user.name}
-							catId={cat.id}
-                            userId={cat.user.id}
-							key={index} 
+							key={index}
+							userName={cat.user.name + ""}
 							profileImage={cat.user.picture}
 							catImage={cat.url}
 							title={cat.title}
-							like={cat.likeList.findIndex(user => user.email === auth.email) !== -1}
 							description={cat.description}
+							like={cat.likeList.findIndex(user => user.email === auth.email) !== -1}
+							catId={cat.id}
+                            userId={cat.user.id}
 						/>
 					))
 			}
