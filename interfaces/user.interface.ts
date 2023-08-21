@@ -4,4 +4,5 @@ export interface User {
     picture: string;
     id: number;
     followers: User[];
+    following: User[];
 }

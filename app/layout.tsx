@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { Providers } from "./providers";
 import clsx from "clsx";
 import { NavigationBar } from "@/components/navigation-bar";
+import { Divider } from "@nextui-org/divider";
 
 export const metadata: Metadata = {
 	title: {
@@ -39,10 +40,11 @@ export default function RootLayout({
 						<main className="container mx-auto max-w-7xl pt-8 px-6 flex-grow">
 							{children}
 						</main>
+						<Divider />
 						<footer className="w-full flex items-center justify-start p-4">
 							<p className="text-[0.5rem]">
 								서비스명: 숨숨집 <br />
-								제작자: 방진혁 <br />
+								제작자: 방진혁 (hyeki0206@naver.com, jinhyeokfang@gmail.com)<br />
 								서버 코드: <a href="https://github.com/jinhyeokfang/sumsumzip_springboot">https://github.com/jinhyeokfang/sumsumzip_springboot</a> &nbsp;
 								클라이언트 코드: <a href="https://github.com/jinhyeokfang/sumsumzip-client">https://github.com/jinhyeokfang/sumsumzip-client</a> <br/>
 							</p>

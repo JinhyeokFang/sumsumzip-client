@@ -30,7 +30,7 @@ export default function CatPage() {
 			<Button className="ml-32 mb-4" onClick={back}>
 				뒤로 가기
 			</Button>
-			<section className="flex flex-col items-start justify-start px-32 gap-4">
+			<section className="flex flex-col items-start justify-start px-32 gap-4 mb-4">
 				<div className="flex justify-center w-full">
 					{
 						cat &&

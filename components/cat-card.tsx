@@ -10,7 +10,6 @@ import { CatApi } from "@/app/api/cat.api";
 import { ChangeEvent, useRef, useState } from "react";
 import { Popover, PopoverContent, PopoverTrigger } from "@nextui-org/popover";
 import { useRouter } from "next/navigation";
-import { UserApi } from "@/app/api/user.api";
 
 export interface CatCardProps {
     profileImage: string;
@@ -54,10 +53,20 @@ export const CatCard = (props: CatCardProps) => {
         }
     }
 
+    const onCardBodyClick = () => {
+        push(`/cat/${catId}`);
+    }
+
     const onCommentInputChange = (e: ChangeEvent) => {
         const target = e.target as HTMLInputElement;
         const value = target.value;
         setCommentContent(value);
+    }
+
+    const onInputKeyDown = (e: KeyboardEvent) => {
+        if (e.key === 'Enter') {
+            onCommentSubmitButtonClick();
+        }
     }
 
     const onCommentSubmitButtonClick = () => {
@@ -87,7 +96,7 @@ export const CatCard = (props: CatCardProps) => {
                 />
             </CardHeader>
             <Divider/>
-            <CardBody>
+            <CardBody className="cursor-pointer" onClick={onCardBodyClick}>
                 <div className="flex justify-center">
                     <Image
                         alt="cat image"
@@ -102,7 +111,7 @@ export const CatCard = (props: CatCardProps) => {
                     initialPressed={like}
                     onPressedChange={onPressedChange}
                 />
-                <Input type="title" placeholder="댓글을 입력하세요" className="m-2" onChange={onCommentInputChange} ref={commentInputRef}/>
+                <Input type="title" placeholder="댓글을 입력하세요" className="m-2" onChange={onCommentInputChange} onKeyDown={onInputKeyDown} ref={commentInputRef}/>
                 <Popover placement="top">
                     <PopoverTrigger>
                         <Button color="primary" onClick={onCommentSubmitButtonClick}>

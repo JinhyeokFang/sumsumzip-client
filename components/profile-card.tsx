@@ -13,7 +13,7 @@ export interface ProfileCardProps {
 export const ProfileCard = (props: ProfileCardProps) => {
   const { initialFollow, user, onFollowChange } = props;
   const [follow, setFollow] = useState(initialFollow);
-
+    console.log(user);
   const onFollowButtonClick = () => {
     setFollow(!follow);
     onFollowChange(!follow);
@@ -21,13 +21,17 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
   return (
     <Card className="w-full p-4">
-        <div className="flex justify-between">
+        <div className="flex justify-between items-center">
             <NextUiUser
                 name={ user.name }
                 avatarProps={{
                     src: user.picture
                 }}
             />
+            <div className="flex justify-between gap-2">
+                <p className="text-xs">팔로어: { user.followers.length } 명</p>
+                <p className="text-xs">팔로우: { user.following.length } 명</p>
+            </div>
             <Button color={follow ? "default" : "primary"} onClick={onFollowButtonClick}>
                 {
                     follow
