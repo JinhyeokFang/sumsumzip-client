@@ -31,10 +31,6 @@ const pageDataWhenLogined = [
         link: '/like', 
     },
     {
-        name: '공유하기',
-        link: '/upload', 
-    },
-    {
         name: '로그아웃',
         link: Constants.serverAddress + '/logout',
     },

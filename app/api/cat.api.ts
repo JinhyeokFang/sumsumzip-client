@@ -107,6 +107,20 @@ export class CatApi {
         }
     }
 
+    static async deleteCat(token: string, catId: number): Promise<void> {
+        try {
+            await fetch(`${Constants.serverAddress}/cat/${catId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                },
+            });
+        } catch (error) {
+            console.error(error);
+            throw error;
+        }
+    }
+
     static async like(token: string, catId: number): Promise<void> {
         try {
             await fetch(`${Constants.serverAddress}/cat/like`, {
@@ -152,6 +166,20 @@ export class CatApi {
                     catId: `${catId}`,
                     content,
                 })
+            });
+        } catch (error) {
+            console.error(error);
+            throw error;
+        }
+    }
+
+    static async deleteComment(token: string, commentId: number): Promise<void> {
+        try {
+            await fetch(`${Constants.serverAddress}/cat/comment/${commentId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                },
             });
         } catch (error) {
             console.error(error);

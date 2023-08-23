@@ -6,11 +6,15 @@ import { Scroll } from "@/util/scroll";
 import { Cat } from "@/interfaces/cat.interface";
 import { useAuth } from "@/states/auth";
 import { UserApi } from "../api/user.api";
+import { Upload } from "@/components/upload-card";
+import { ProfileCard } from "@/components/profile-card";
+import { User } from "@/interfaces/user.interface";
 
 let pageNumber = 0;
 export default function MyPage() {
 	const auth = useAuth();
 	const [cats, setCats] = useState<Cat[]>([]);
+    const [user, setUser] = useState<User>();
 
 	// event listener에서는 state 불러오기가 불가능(useEffect 내에선 가능)하여 파라미터로 불러옴
 	const loadCats = async (cats: Cat[]) => {
@@ -25,7 +29,16 @@ export default function MyPage() {
 		})
 	}
 
+    const loadUser = async () => {
+		if (auth.token === null) {
+			throw new Error("로그인이 필요합니다.");
+		}
+		const userDataFromApi = await UserApi.getUserDataByToken(auth.token);
+        setUser(userDataFromApi as any as User);
+    }
+
 	useEffect(() => {
+		loadUser();
 		loadCats(cats);
 	}, []);
 	useEffect(() => {
@@ -40,21 +53,25 @@ export default function MyPage() {
 	}, [cats]);
 
 	return (
-		<section className="flex flex-col items-center justify-center px-32 gap-4">
+		<section className="flex flex-col items-center justify-center px-[10vw] gap-4">
+			{
+				user && auth.email && 
+				<>
+					<ProfileCard
+						user={user}
+						onFollowChange={() => {}}
+						initialFollow={false}
+					/>
+				</>
+			}
+			<Upload />
 			{
 				cats
 					.sort((a, b) => -(a.id - b.id))
 					.map((cat, index) => (
 						<CatCard
-							userName={cat.user.name}
-							catId={cat.id}
-                            userId={cat.user.id}
-							key={index} 
-							profileImage={cat.user.picture}
-							catImage={cat.url}
-							title={cat.title}
-							like={cat.likeList.findIndex(user => user.email === auth.email) !== -1}
-							description={cat.description}
+							key={index}
+							cat={cat}
 						/>
 					))
 			}

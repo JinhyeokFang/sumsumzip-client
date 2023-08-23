@@ -1,14 +1,13 @@
-'use client'
 import { ChangeEvent, useRef, useState } from "react";
 import { Card, CardBody, CardFooter, CardHeader } from "@nextui-org/card";
 import { Divider } from "@nextui-org/divider";
 import { Input, Textarea } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
 import { Image } from "@nextui-org/image";
-import { CatApi } from "../api/cat.api";
+import { CatApi } from "../app/api/cat.api";
 import { useAuth } from "@/states/auth";
 
-export default function Upload() {
+export const Upload = () => {
 	const [title, setTitle] = useState('');
 	const [description, setDescription] = useState('');
 	const [rawImage, setRawImage] = useState<File | null>(null);
@@ -41,6 +40,10 @@ export default function Upload() {
 		setDescription(target.value);
 	}
 
+	const back = () => {
+		window.history.back();
+	}
+
 	const submit = () => {
 		if (!auth.token) {
 			alert("로그인이 필요합니다.");
@@ -60,44 +63,43 @@ export default function Upload() {
 			return;
 		}
 		CatApi.uploadCat(auth.token, title, description, rawImage);
+		back();
 	}
 
 	return (
-		<section className="flex flex-col items-center justify-center gap-4">
-			<Card className="w-[400px]">
-				<CardHeader className="flex gap-3">
-					<Input type="title" label="제목" placeholder="제목을 입력하세요" onChange={titleChange}/>
-				</CardHeader>
-				<Divider/>
-				<CardBody>
-					{
-						previewImage 
-							? <Image src={previewImage} alt="미리보기 사진"/>
-							: <p className="text-center">이미지를 올려주세요</p>
-					}
-					<Button onClick={imageButtonClick} color="primary" className="my-4">
-						이미지 첨부하기
-					</Button>
-					<input
-						type="file"
-						ref={hiddenFileInput}
-						onChange={imageInputChange}
-						style={{display: 'none'}} 
-					/>
-					<Textarea
-						label="내용"
-						labelPlacement="outside"
-						placeholder="내용을 입력하세요"
-						onChange={descriptionChange}
-					/>
-				</CardBody>
-				<Divider/>
-				<CardFooter className="flex justify-center">
-					<Button color="primary" onClick={submit}>
-						공유하기
-					</Button>
-				</CardFooter>
-			</Card>
-		</section>
+		<Card className="w-[400px]">
+			<CardHeader className="flex gap-3">
+				<Input type="title" label="제목" placeholder="제목을 입력하세요" onChange={titleChange}/>
+			</CardHeader>
+			<Divider/>
+			<CardBody>
+				{
+					previewImage 
+						? <Image src={previewImage} alt="미리보기 사진"/>
+						: <p className="text-center">이미지를 올려주세요</p>
+				}
+				<Button onClick={imageButtonClick} color="primary" className="my-4">
+					이미지 첨부하기
+				</Button>
+				<input
+					type="file"
+					ref={hiddenFileInput}
+					onChange={imageInputChange}
+					style={{display: 'none'}} 
+				/>
+				<Textarea
+					label="내용"
+					labelPlacement="outside"
+					placeholder="내용을 입력하세요"
+					onChange={descriptionChange}
+				/>
+			</CardBody>
+			<Divider/>
+			<CardFooter className="flex justify-center">
+				<Button color="primary" onClick={submit}>
+					공유하기
+				</Button>
+			</CardFooter>
+		</Card>
 	);
 }

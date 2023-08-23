@@ -61,7 +61,7 @@ export default function Home() {
     }
 
 	return (
-		<section className="flex flex-col items-center justify-center px-32 gap-4">
+		<section className="flex flex-col items-center justify-center px-[10vw] gap-4">
             {
                 user && auth.email && 
                 <>
@@ -77,15 +77,8 @@ export default function Home() {
 					.sort((a, b) => -(a.id - b.id))
 					.map((cat, index) => (
 						<CatCard
-							userName={cat.user.name}
-                            userId={cat.user.id}
-							catId={cat.id}
-							key={index} 
-							profileImage={cat.user.picture}
-							catImage={cat.url}
-							title={cat.title}
-							like={cat.likeList.findIndex(user => user.email === auth.email) !== -1}
-							description={cat.description}
+							key={index}
+							cat={cat}
 						/>
 					))
 			}

@@ -6,7 +6,7 @@ import { useParams } from "next/navigation";
 import { Button } from "@nextui-org/button";
 import { useAuth } from "@/states/auth";
 import { Cat } from "@/interfaces/cat.interface";
-import { Comment } from "@/components/comment";
+import { CommentCard } from "@/components/comment";
 
 export default function CatPage() {
 	const auth = useAuth();
@@ -30,32 +30,23 @@ export default function CatPage() {
 			<Button className="ml-32 mb-4" onClick={back}>
 				뒤로 가기
 			</Button>
-			<section className="flex flex-col items-start justify-start px-32 gap-4 mb-4">
+			<section className="flex flex-col items-start justify-start px-[10vw] gap-4 mb-4">
 				<div className="flex justify-center w-full">
 					{
 						cat &&
-						<CatCard
-							userName={cat.user.name + ""}
-							profileImage={cat.user.picture}
-							catImage={cat.url}
-							title={cat.title}
-							description={cat.description}
-							like={cat.likeList.findIndex(user => user.email === auth.email) !== -1}
-							catId={cat.id}
-                            userId={cat.user.id}
-						/>
+						<CatCard cat={cat}/>
 					}
 				</div>
 				{
 					cat &&
 					(
 						<>
-							<h2>댓글: {cat.comments.length }개</h2>
+							<h2 className="select-none">댓글: {cat.comments.length }개</h2>
 							{
 								cat.comments.map((comment, index) => (
-									<Comment
+									<CommentCard
 										key={index}
-										content={comment.content}
+										comment={comment}
 										user={comment.user}
 									/>
 								))

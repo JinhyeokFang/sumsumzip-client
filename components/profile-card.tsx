@@ -1,4 +1,5 @@
 import { User } from "@/interfaces/user.interface";
+import { useAuth } from "@/states/auth";
 import { Button } from "@nextui-org/button";
 import { Card } from "@nextui-org/card";
 import { User as NextUiUser } from "@nextui-org/user";
@@ -12,6 +13,7 @@ export interface ProfileCardProps {
 
 export const ProfileCard = (props: ProfileCardProps) => {
   const { initialFollow, user, onFollowChange } = props;
+  const auth = useAuth();
   const [follow, setFollow] = useState(initialFollow);
     console.log(user);
   const onFollowButtonClick = () => {
@@ -28,17 +30,22 @@ export const ProfileCard = (props: ProfileCardProps) => {
                     src: user.picture
                 }}
             />
-            <div className="flex justify-between gap-2">
-                <p className="text-xs">팔로어: { user.followers.length } 명</p>
-                <p className="text-xs">팔로우: { user.following.length } 명</p>
+            <div className="flex items-center justify-between gap-4">
+              <div className="flex justify-between gap-2">
+                  <p className="text-xs">팔로어: { user.followers.length } 명</p>
+                  <p className="text-xs">팔로우: { user.following.length } 명</p>
+              </div>
+              {
+                auth.email !== user.email &&
+                <Button color={follow ? "default" : "primary"} onClick={onFollowButtonClick}>
+                    {
+                        follow
+                            ? "언팔로우"
+                            : "팔로우"
+                    }
+                </Button>
+              }
             </div>
-            <Button color={follow ? "default" : "primary"} onClick={onFollowButtonClick}>
-                {
-                    follow
-                        ? "언팔로우"
-                        : "팔로우"
-                }
-            </Button>
         </div>
     </Card>
   );

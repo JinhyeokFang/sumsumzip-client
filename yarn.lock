@@ -423,6 +423,29 @@
     "@react-aria/utils" "^3.18.0"
     "@react-types/link" "^3.4.3"
 
+"@nextui-org/modal@^2.0.16":
+  version "2.0.16"
+  resolved "https://registry.yarnpkg.com/@nextui-org/modal/-/modal-2.0.16.tgz#c85641f039134c95a78178fb777764d4a0acf7a9"
+  integrity sha512-LlK8Jg0WZN8obu9DIdEHCY3QseiudL8Xh6NGWwf/J31VPtaZ5Lcase4QxsWpJQ4gNxDZW+Qgx6d44Ur3OIXcPw==
+  dependencies:
+    "@nextui-org/framer-transitions" "2.0.5"
+    "@nextui-org/react-utils" "2.0.7"
+    "@nextui-org/shared-icons" "2.0.3"
+    "@nextui-org/shared-utils" "2.0.2"
+    "@nextui-org/system" "2.0.5"
+    "@nextui-org/theme" "2.1.2"
+    "@nextui-org/use-aria-button" "2.0.3"
+    "@nextui-org/use-aria-modal-overlay" "2.0.3"
+    "@nextui-org/use-disclosure" "2.0.3"
+    "@react-aria/dialog" "^3.5.4"
+    "@react-aria/focus" "^3.14.0"
+    "@react-aria/interactions" "^3.17.0"
+    "@react-aria/overlays" "^3.16.0"
+    "@react-aria/utils" "^3.19.0"
+    "@react-stately/overlays" "^3.6.1"
+    "@react-types/overlays" "^3.8.1"
+    react-remove-scroll "^2.5.6"
+
 "@nextui-org/navbar@2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@nextui-org/navbar/-/navbar-2.0.0.tgz#71dcadc7580cd688a994d314129218320cfaf266"
@@ -476,6 +499,11 @@
   resolved "https://registry.yarnpkg.com/@nextui-org/react-rsc-utils/-/react-rsc-utils-2.0.6.tgz#931aa1e66743e454b571efca986eecc4ba371de5"
   integrity sha512-32hglPfvA77lFO1XbDBf8a/bVthRjFTWWsYAMGWFF4GKhl/WYBzVRaFmIQjimd6FOfLFhPvolWHEukH3kTlyyQ==
 
+"@nextui-org/react-rsc-utils@2.0.7":
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/@nextui-org/react-rsc-utils/-/react-rsc-utils-2.0.7.tgz#f7ab0ef8ac39dd43c9c7649fc38d24c31a9055f3"
+  integrity sha512-BfbrN0/kh7qHoZYAh0bkV1w04Wngm+7K+soTZR4C3eSIxMMeu179CDELW+VCIBwdat4iSQaaJkHZVm8brtueNA==
+
 "@nextui-org/react-utils@2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@nextui-org/react-utils/-/react-utils-2.0.0.tgz#2dd392562e7ec77439c66fb9ee45e30456674edf"
@@ -498,6 +526,14 @@
   integrity sha512-9mRDJj1hNNdKTxt9idQc/OVI+3UzvSErRCjN2hfVVi2c5JrR5b0/Zpx7PV0PHy7yfGUn1hyvwK5ZTVkNhxISKQ==
   dependencies:
     "@nextui-org/react-rsc-utils" "2.0.6"
+    "@nextui-org/shared-utils" "2.0.2"
+
+"@nextui-org/react-utils@2.0.7":
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/@nextui-org/react-utils/-/react-utils-2.0.7.tgz#53cdfdbe0ed18d7fdda3e63ef355c0f358b8c56b"
+  integrity sha512-dN4vSf3h4BVIN6CVqaSCn2OUyDmGVWORgOsfA1k0z/r1XBwuxlfQIEnj8GTwbltnGkFrgj7PJ2RsuVzUs8Vt3g==
+  dependencies:
+    "@nextui-org/react-rsc-utils" "2.0.7"
     "@nextui-org/shared-utils" "2.0.2"
 
 "@nextui-org/ripple@2.0.0":
@@ -529,6 +565,11 @@
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@nextui-org/shared-icons/-/shared-icons-2.0.2.tgz#1c7405d663d2ab77f2f80534e3f7cfc54f9fe9d6"
   integrity sha512-TtGFRY4ihRg8HuaFmwIx83LgCZ5bf2FOs407v23Bb0RDrum+3qZOeuClC8bcvivWZz/KUz9ZugGJdGYYSkMcbA==
+
+"@nextui-org/shared-icons@2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@nextui-org/shared-icons/-/shared-icons-2.0.3.tgz#7d0ac9ce21af2b3a2dd70651f7b362c237cfdde1"
+  integrity sha512-2ODlzPWW+iYM7Uf7XDkz7GlJ+dzsFo6cBHH9hbbZEOx2v7/wB8x3VvrZcQ4SASewSb18a/wzxP8MJFnIUCOCrQ==
 
 "@nextui-org/shared-utils@2.0.0":
   version "2.0.0"
@@ -672,6 +713,30 @@
     tailwind-variants "^0.1.13"
     tailwindcss "^3.2.7"
 
+"@nextui-org/theme@2.1.2":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@nextui-org/theme/-/theme-2.1.2.tgz#c8bc88687cd9972ea793a8824a06812781b2353b"
+  integrity sha512-r71nB3kP5Y8aGQ2dke4Das8Fyq+B1IlvazL2xYPQBq1HwMOWL9eRsUjnIR8o2o+HqUYchLncuWzWDiKYeTy8YQ==
+  dependencies:
+    "@types/color" "^3.0.3"
+    "@types/flat" "^5.0.2"
+    "@types/lodash.foreach" "^4.5.7"
+    "@types/lodash.get" "^4.4.7"
+    "@types/lodash.kebabcase" "^4.1.7"
+    "@types/lodash.mapkeys" "^4.6.7"
+    "@types/lodash.omit" "^4.5.7"
+    color "^4.2.3"
+    color2k "^2.0.2"
+    deepmerge "4.3.1"
+    flat "^5.0.2"
+    lodash.foreach "^4.5.0"
+    lodash.get "^4.4.2"
+    lodash.kebabcase "^4.1.1"
+    lodash.mapkeys "^4.6.0"
+    lodash.omit "^4.5.0"
+    tailwind-variants "^0.1.13"
+    tailwindcss "^3.2.7"
+
 "@nextui-org/tooltip@2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@nextui-org/tooltip/-/tooltip-2.0.0.tgz#8d62fabac6f495b89131315d04f5c507d4c6aa3d"
@@ -713,6 +778,16 @@
     "@react-types/button" "^3.7.4"
     "@react-types/shared" "^3.19.0"
 
+"@nextui-org/use-aria-modal-overlay@2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@nextui-org/use-aria-modal-overlay/-/use-aria-modal-overlay-2.0.3.tgz#6cf1476838795a8020a32478e8a882e7402c783b"
+  integrity sha512-ajh7bEV+OaQ7s6DWC3rBwbkr8eTi2/ykf4mNc/682Y5cuR2ZPrBGg00HStVcNDZOdwUBArVhTWQaQ8e+0lwBww==
+  dependencies:
+    "@react-aria/overlays" "^3.16.0"
+    "@react-aria/utils" "^3.19.0"
+    "@react-stately/overlays" "^3.6.1"
+    "@react-types/shared" "^3.19.0"
+
 "@nextui-org/use-aria-toggle-button@2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@nextui-org/use-aria-toggle-button/-/use-aria-toggle-button-2.0.0.tgz#5f1c73da0bc6dd78cba72ca126bcf3be58276b11"
@@ -724,10 +799,26 @@
     "@react-types/button" "^3.7.3"
     "@react-types/shared" "^3.18.1"
 
+"@nextui-org/use-callback-ref@2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@nextui-org/use-callback-ref/-/use-callback-ref-2.0.2.tgz#43b78a38c648387976536c0c49a6065555ee3eb5"
+  integrity sha512-avKTXdy/bOfjPKTBj1RIdkbdqTC9ICZUzb5GejR4riA3zCcHwS2JxjQTGb9xNF3Y5DyH1Mb7hf2+jBmqF2g/QA==
+  dependencies:
+    "@nextui-org/use-safe-layout-effect" "2.0.2"
+
 "@nextui-org/use-clipboard@2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@nextui-org/use-clipboard/-/use-clipboard-2.0.0.tgz#93a4e43193963f2f2687c1b97326b26634710736"
   integrity sha512-ZORt7bOPClbMA1rzYVVuwD4YdL02cT8UrLpxCeURu/Xk0dTQ6m9nnO7PBbWwy7W8WevTO1dDSWQQ+Jp5Pqn4pQ==
+
+"@nextui-org/use-disclosure@2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@nextui-org/use-disclosure/-/use-disclosure-2.0.3.tgz#2a5d138547f2debde41d4e16e7e6462ba17cc044"
+  integrity sha512-bPs4/wXSytiR5xxhlErkxXc2Fk3siQqLK5g/Qo+f2CQopXTaldkbIIlu/0lzd0KBIApX5z0rOr3bnr9Xu1Wn4A==
+  dependencies:
+    "@nextui-org/use-callback-ref" "2.0.2"
+    "@react-aria/utils" "^3.19.0"
+    "@react-stately/utils" "^3.7.0"
 
 "@nextui-org/use-image@2.0.2":
   version "2.0.2"
@@ -1086,10 +1177,74 @@
   dependencies:
     tslib "^2.4.0"
 
+"@types/color-convert@*":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@types/color-convert/-/color-convert-2.0.0.tgz#8f5ee6b9e863dcbee5703f5a517ffb13d3ea4e22"
+  integrity sha512-m7GG7IKKGuJUXvkZ1qqG3ChccdIM/qBBo913z+Xft0nKCX4hAU/IxKwZBU4cpRZ7GS5kV4vOblUkILtSShCPXQ==
+  dependencies:
+    "@types/color-name" "*"
+
+"@types/color-name@*":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
+  integrity sha512-rr+OQyAjxze7GgWrSaJwydHStIhHq2lvY3BOC2Mj7KnzI7XK0Uw1TOOdI9lDoajEbSWLiYgoo4f1R51erQfhPQ==
+
+"@types/color@^3.0.3":
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@types/color/-/color-3.0.3.tgz#e6d8d72b7aaef4bb9fe80847c26c7c786191016d"
+  integrity sha512-X//qzJ3d3Zj82J9sC/C18ZY5f43utPbAJ6PhYt/M7uG6etcF6MRpKdN880KBy43B0BMzSfeT96MzrsNjFI3GbA==
+  dependencies:
+    "@types/color-convert" "*"
+
+"@types/flat@^5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@types/flat/-/flat-5.0.2.tgz#642a51a037d1f52fda082312b0e4566dc09a9f8f"
+  integrity sha512-3zsplnP2djeps5P9OyarTxwRpMLoe5Ash8aL9iprw0JxB+FAHjY+ifn4yZUuW4/9hqtnmor6uvjSRzJhiVbrEQ==
+
 "@types/json5@^0.0.29":
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==
+
+"@types/lodash.foreach@^4.5.7":
+  version "4.5.7"
+  resolved "https://registry.yarnpkg.com/@types/lodash.foreach/-/lodash.foreach-4.5.7.tgz#9d731438e76744ad668977ac80eab1e902d284c7"
+  integrity sha512-YjBEB6/Bl19V+R70IpyB/MhMb2IvrSgD26maRNyqbGRNDTH9AnPrQoT+ECvhFJ/hwhQ+RgYWaZKvF+knCguMJw==
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash.get@^4.4.7":
+  version "4.4.7"
+  resolved "https://registry.yarnpkg.com/@types/lodash.get/-/lodash.get-4.4.7.tgz#1ea63d8b94709f6bc9e231f252b31440abe312cf"
+  integrity sha512-af34Mj+KdDeuzsJBxc/XeTtOx0SZHZNLd+hdrn+PcKGQs0EG2TJTzQAOTCZTgDJCArahlCzLWSy8c2w59JRz7Q==
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash.kebabcase@^4.1.7":
+  version "4.1.7"
+  resolved "https://registry.yarnpkg.com/@types/lodash.kebabcase/-/lodash.kebabcase-4.1.7.tgz#eb2d1162c669ecbc77f9912a31e952563848deff"
+  integrity sha512-qzrcpK5uiADZ9OyZaegalM0b9Y3WetoBQ04RAtP3xZFGC5ul1UxmbjZ3j6suCh0BDkvgQmoMh8t5e9cVrdJYMw==
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash.mapkeys@^4.6.7":
+  version "4.6.7"
+  resolved "https://registry.yarnpkg.com/@types/lodash.mapkeys/-/lodash.mapkeys-4.6.7.tgz#3b06a1e426195fbd6d479ba63e7f91e167c14b34"
+  integrity sha512-mfK0jlh4Itdhmy69/7r/vYftWaltahoS9kCF62UyvbDtXzMkUjuypaf2IASeoeoUPqBo/heoJSZ/vntbXC6LAA==
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash.omit@^4.5.7":
+  version "4.5.7"
+  resolved "https://registry.yarnpkg.com/@types/lodash.omit/-/lodash.omit-4.5.7.tgz#2357ed2412b4164344e8ee41f85bb0b2920304ba"
+  integrity sha512-6q6cNg0tQ6oTWjSM+BcYMBhan54P/gLqBldG4AuXd3nKr0oeVekWNS4VrNEu3BhCSDXtGapi7zjhnna0s03KpA==
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash@*":
+  version "4.14.197"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.197.tgz#e95c5ddcc814ec3e84c891910a01e0c8a378c54b"
+  integrity sha512-BMVOiWs0uNxHVlHBgzTIqJYmj+PgCo4euloGF+5m4okL3rEYzM2EEv78mw8zWSMM57dM7kVIgJ2QDvwHSoCI5g==
 
 "@types/node@20.2.5":
   version "20.2.5"
