@@ -4,6 +4,7 @@
     "@next/next/no-page-custom-font": "off"
   },
   "parserOptions": {
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaVersion": "latest"
   }
 }
