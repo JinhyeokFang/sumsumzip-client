@@ -67,7 +67,7 @@ export const Upload = () => {
 	}
 
 	return (
-		<Card className="w-[400px]">
+		<Card className="w-full">
 			<CardHeader className="flex gap-3">
 				<Input type="title" label="제목" placeholder="제목을 입력하세요" onChange={titleChange}/>
 			</CardHeader>
