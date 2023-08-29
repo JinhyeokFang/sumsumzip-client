@@ -4,7 +4,7 @@ import { recoilPersist } from 'recoil-persist';
 
 const { persistAtom } = recoilPersist();
 
-export const authState = atom<Auth>({
+export const authState = atom<any>({
     key: 'Auth',
     default: {
         logined: false,
