@@ -44,7 +44,7 @@ export const Upload = () => {
 		window.history.back();
 	}
 
-	const submit = () => {
+	const submit = async () => {
 		if (!auth.token) {
 			alert("로그인이 필요합니다.");
 			return;
@@ -62,7 +62,8 @@ export const Upload = () => {
 			alert("이미지를 첨부해주세요.");
 			return;
 		}
-		CatApi.uploadCat(auth.token, title, description, rawImage);
+		await CatApi.uploadCat(auth.token, title, description, rawImage);
+		alert("업로드되었습니다.");
 		back();
 	}
 
